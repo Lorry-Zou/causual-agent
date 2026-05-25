@@ -1,0 +1,78 @@
+{
+  "user_id": "CUST00000021",
+  "inspection_time": "2026-05-25T12:15:35",
+  "policies": [
+    {
+      "policy_no": "POL0000000041",
+      "insurance_type": "医疗险",
+      "original_status": "新保",
+      "inferred_state": "生效中",
+      "sum_insured": 291222.04,
+      "annual_premium": 1716.12,
+      "effective_date": "2022-10-17",
+      "expiry_date": "2042-10-12",
+      "days_to_expiry": 5984,
+      "days_past_expiry": 0,
+      "is_short_term": true,
+      "has_claims": false,
+      "cumulative_claim_amount": 0,
+      "state_updated_at": "2026-05-25T12:15:35"
+    },
+    {
+      "policy_no": "POL0000000042",
+      "insurance_type": "重疾险",
+      "original_status": "加保",
+      "inferred_state": "加保(生效中)",
+      "sum_insured": 128345.7,
+      "annual_premium": 1878.08,
+      "effective_date": "2024-11-22",
+      "expiry_date": "2034-11-20",
+      "days_to_expiry": 3101,
+      "days_past_expiry": 0,
+      "is_short_term": false,
+      "has_claims": false,
+      "cumulative_claim_amount": 0,
+      "state_updated_at": "2026-05-25T12:15:35"
+    },
+    {
+      "policy_no": "POL0000000043",
+      "insurance_type": "意外险",
+      "original_status": "续保",
+      "inferred_state": "到期终止",
+      "sum_insured": 28553.89,
+      "annual_premium": 831.67,
+      "effective_date": "2025-01-07",
+      "expiry_date": "2026-01-07",
+      "days_to_expiry": -138,
+      "days_past_expiry": 138,
+      "is_short_term": true,
+      "has_claims": true,
+      "cumulative_claim_amount": 13389.07,
+      "state_updated_at": "2026-05-25T12:15:35"
+    },
+    {
+      "policy_no": "POL0000000044",
+      "insurance_type": "医疗险",
+      "original_status": "失效",
+      "inferred_state": "失效",
+      "sum_insured": 188013.58,
+      "annual_premium": 1099.73,
+      "effective_date": "2024-11-06",
+      "expiry_date": "2025-11-06",
+      "days_to_expiry": -200,
+      "days_past_expiry": 200,
+      "is_short_term": true,
+      "has_claims": true,
+      "cumulative_claim_amount": 53565.27,
+      "state_updated_at": "2026-05-25T12:15:35"
+    }
+  ],
+  "summary": {
+    "total": 4,
+    "active": 2,
+    "pending": 0,
+    "grace": 0,
+    "terminated": 2,
+    "other": 0
+  }
+}

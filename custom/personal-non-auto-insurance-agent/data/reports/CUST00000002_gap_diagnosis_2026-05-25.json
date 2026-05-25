@@ -1,0 +1,105 @@
+{
+  "report_id": "GAP20260525_CUST00000002",
+  "user_id": "CUST00000002",
+  "generated_at": "2026-05-25T13:05:16",
+  "trigger": "churn-recovery gap re-engagement",
+  "causal_calibration_applied": true,
+  "causal_methods": [
+    "DML (LinearDML)",
+    "PSM"
+  ],
+  "causal_params": {
+    "ate_income_ci": 4.0527,
+    "ate_burden_life": 107687,
+    "ate_city_medical": 24894,
+    "ate_city_life": 248109,
+    "ate_age_ci": -4079
+  },
+  "user_segment": "二人世界_二线_4.0w",
+  "gap_analysis": {
+    "medical_gap": {
+      "raw": 482220.0,
+      "calibrated": 507114.0,
+      "adjustment": 24894,
+      "adjustment_note": "City tier ATE: +24894/level"
+    },
+    "critical_illness_gap": {
+      "required_raw": 713428.0,
+      "existing": 655712.0,
+      "raw": 57716.0,
+      "calibrated": 0,
+      "adjustment": -37054.0,
+      "adjustment_note": "Income ATE: 4.0527/yuan"
+    },
+    "life_gap": {
+      "required_raw": 300000,
+      "existing": 0,
+      "raw": 300000,
+      "calibrated": 494266.0,
+      "adjustment": 194265.0,
+      "adjustment_note": "Burden ATE: 107687/unit + City ATE: 248109/level"
+    }
+  },
+  "anomalies": [
+    {
+      "type": "保障缺失",
+      "detail": "无医疗险覆盖",
+      "severity": "critical"
+    },
+    {
+      "type": "险种错配",
+      "detail": "65岁以上重疾险杠杆极低,建议转医疗+意外+护理",
+      "severity": "medium"
+    }
+  ],
+  "plans": {
+    "minimal": {
+      "products": [
+        {
+          "product": "百万医疗险",
+          "coverage": "300万",
+          "premium": 2050,
+          "priority": 1
+        }
+      ],
+      "total_premium": 2050,
+      "pct_income": 5.0
+    },
+    "balanced": {
+      "products": [
+        {
+          "product": "中端医疗险",
+          "coverage": "500万",
+          "premium": 8500,
+          "priority": 1
+        }
+      ],
+      "total_premium": 8500,
+      "pct_income": 20.8
+    },
+    "premium": {
+      "products": [
+        {
+          "product": "中端医疗险",
+          "coverage": "500万",
+          "premium": 8500,
+          "priority": 1
+        },
+        {
+          "product": "高端医疗险",
+          "coverage": "1000万",
+          "premium": 25500,
+          "priority": 1
+        },
+        {
+          "product": "年金险",
+          "coverage": "养老储蓄",
+          "premium": 10000,
+          "priority": 5
+        }
+      ],
+      "total_premium": 44000,
+      "pct_income": 107.7
+    }
+  }
+}

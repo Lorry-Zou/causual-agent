@@ -1,0 +1,30 @@
+{
+  "user_id": "CUST00000011",
+  "inspection_time": "2026-05-25T12:15:35",
+  "policies": [
+    {
+      "policy_no": "POL0000000025",
+      "insurance_type": "医疗险",
+      "original_status": "续保",
+      "inferred_state": "到期终止",
+      "sum_insured": 151933.5,
+      "annual_premium": 1579.57,
+      "effective_date": "2023-11-19",
+      "expiry_date": "2024-11-18",
+      "days_to_expiry": -553,
+      "days_past_expiry": 553,
+      "is_short_term": true,
+      "has_claims": false,
+      "cumulative_claim_amount": 0,
+      "state_updated_at": "2026-05-25T12:15:35"
+    }
+  ],
+  "summary": {
+    "total": 1,
+    "active": 0,
+    "pending": 0,
+    "grace": 0,
+    "terminated": 1,
+    "other": 0
+  }
+}

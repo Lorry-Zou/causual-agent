@@ -1,0 +1,134 @@
+{
+  "report_id": "GAP20260525_CUST00000126",
+  "user_id": "CUST00000126",
+  "generated_at": "2026-05-25T13:05:16",
+  "trigger": "churn-recovery gap re-engagement",
+  "causal_calibration_applied": true,
+  "causal_methods": [
+    "DML (LinearDML)",
+    "PSM"
+  ],
+  "causal_params": {
+    "ate_income_ci": 4.0527,
+    "ate_burden_life": 107687,
+    "ate_city_medical": 24894,
+    "ate_city_life": 248109,
+    "ate_age_ci": -4079
+  },
+  "user_segment": "单身_三线_3.0w",
+  "gap_analysis": {
+    "medical_gap": {
+      "raw": 277728.0,
+      "calibrated": 277728.0,
+      "adjustment": 0,
+      "adjustment_note": "City tier ATE: +24894/level"
+    },
+    "critical_illness_gap": {
+      "required_raw": 679470.0,
+      "existing": 0,
+      "raw": 679470.0,
+      "calibrated": 620248.0,
+      "adjustment": -71459.0,
+      "adjustment_note": "Income ATE: 4.0527/yuan"
+    },
+    "life_gap": {
+      "required_raw": 300000,
+      "existing": 0,
+      "raw": 300000,
+      "calibrated": 192313.0,
+      "adjustment": -107687.0,
+      "adjustment_note": "Burden ATE: 107687/unit + City ATE: 248109/level"
+    }
+  },
+  "anomalies": [
+    {
+      "type": "保障缺失",
+      "detail": "无意外险覆盖",
+      "severity": "high"
+    },
+    {
+      "type": "保障缺失",
+      "detail": "无重疾险覆盖",
+      "severity": "critical"
+    },
+    {
+      "type": "保额不足",
+      "detail": "医疗险保额不足以覆盖社保外费用",
+      "severity": "medium"
+    }
+  ],
+  "plans": {
+    "minimal": {
+      "products": [
+        {
+          "product": "百万医疗险",
+          "coverage": "300万",
+          "premium": 400,
+          "priority": 1
+        },
+        {
+          "product": "意外险",
+          "coverage": "100万",
+          "premium": 300,
+          "priority": 2
+        }
+      ],
+      "total_premium": 700,
+      "pct_income": 2.2
+    },
+    "balanced": {
+      "products": [
+        {
+          "product": "意外险",
+          "coverage": "100万",
+          "premium": 300,
+          "priority": 2
+        },
+        {
+          "product": "中端医疗险",
+          "coverage": "500万",
+          "premium": 1900,
+          "priority": 1
+        },
+        {
+          "product": "重疾险",
+          "coverage": "50万",
+          "premium": 6600,
+          "priority": 3
+        }
+      ],
+      "total_premium": 8800,
+      "pct_income": 27.2
+    },
+    "premium": {
+      "products": [
+        {
+          "product": "意外险",
+          "coverage": "100万",
+          "premium": 300,
+          "priority": 2
+        },
+        {
+          "product": "中端医疗险",
+          "coverage": "500万",
+          "premium": 1900,
+          "priority": 1
+        },
+        {
+          "product": "高端医疗险",
+          "coverage": "1000万",
+          "premium": 9000,
+          "priority": 1
+        },
+        {
+          "product": "重疾险(高保额)",
+          "coverage": "100万",
+          "premium": 13000,
+          "priority": 3
+        }
+      ],
+      "total_premium": 24200,
+      "pct_income": 74.8
+    }
+  }
+}

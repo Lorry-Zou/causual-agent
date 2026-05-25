@@ -1,0 +1,33 @@
+{
+  "user_id": "CUST00000011",
+  "report_date": "2026-05-25",
+  "family_structure": "四口之家",
+  "age_group": "青壮",
+  "total_annual_premium": 0,
+  "insured_persons_summary": [
+    {
+      "person": "self",
+      "policies_count": 1,
+      "active_policies_count": 0,
+      "coverage_summary": {
+        "医疗险": 0
+      },
+      "annual_premium": 0
+    }
+  ],
+  "alerts": [
+    "NO_MEDICAL: 无有效医疗险覆盖",
+    "NO_CRITICAL_ILLNESS: 无有效重疾险覆盖",
+    "NO_ACCIDENT: 无有效意外险覆盖",
+    "NO_LIFE_WITH_DEPENDENTS: 有子女但无寿险覆盖"
+  ],
+  "need_tags": [
+    "大病保障(0.95)",
+    "家庭责任(0.92)",
+    "子女规划(0.85)",
+    "医疗刚需(0.75)",
+    "出行保障(0.60)"
+  ],
+  "generated_by": "policy-orchestrator",
+  "generated_at": "2026-05-25T12:15:35"
+}

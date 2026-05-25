@@ -1,0 +1,203 @@
+{
+  "report_date": "2026-05-25",
+  "generated_at": "2026-05-25T12:15:35",
+  "total_customers_analyzed": 6,
+  "total_policies": 18,
+  "total_active_policies": 7,
+  "total_annual_premium": 16079.27,
+  "total_alerts": 1,
+  "total_anomalies_for_churn": 8,
+  "per_customer_reports": [
+    {
+      "user_id": "CUST00000028",
+      "report_date": "2026-05-25",
+      "family_structure": "三口之家",
+      "age_group": "青壮",
+      "total_annual_premium": 1356.95,
+      "insured_persons_summary": [
+        {
+          "person": "self",
+          "policies_count": 4,
+          "active_policies_count": 1,
+          "coverage_summary": {
+            "旅行险": 0,
+            "重疾险": 0,
+            "寿险": 215984.94,
+            "家财险": 0
+          },
+          "annual_premium": 1356.95
+        }
+      ],
+      "alerts": [
+        "NO_MEDICAL: 无有效医疗险覆盖",
+        "NO_CRITICAL_ILLNESS: 无有效重疾险覆盖",
+        "NO_ACCIDENT: 无有效意外险覆盖"
+      ],
+      "need_tags": [
+        "医疗刚需(0.95)",
+        "大病保障(0.85)",
+        "子女规划(0.85)",
+        "家庭责任(0.75)",
+        "出行保障(0.60)"
+      ],
+      "generated_by": "policy-orchestrator",
+      "generated_at": "2026-05-25T12:15:35"
+    },
+    {
+      "user_id": "CUST00000011",
+      "report_date": "2026-05-25",
+      "family_structure": "四口之家",
+      "age_group": "青壮",
+      "total_annual_premium": 0,
+      "insured_persons_summary": [
+        {
+          "person": "self",
+          "policies_count": 1,
+          "active_policies_count": 0,
+          "coverage_summary": {
+            "医疗险": 0
+          },
+          "annual_premium": 0
+        }
+      ],
+      "alerts": [
+        "NO_MEDICAL: 无有效医疗险覆盖",
+        "NO_CRITICAL_ILLNESS: 无有效重疾险覆盖",
+        "NO_ACCIDENT: 无有效意外险覆盖",
+        "NO_LIFE_WITH_DEPENDENTS: 有子女但无寿险覆盖"
+      ],
+      "need_tags": [
+        "大病保障(0.95)",
+        "家庭责任(0.92)",
+        "子女规划(0.85)",
+        "医疗刚需(0.75)",
+        "出行保障(0.60)"
+      ],
+      "generated_by": "policy-orchestrator",
+      "generated_at": "2026-05-25T12:15:35"
+    },
+    {
+      "user_id": "CUST00000126",
+      "report_date": "2026-05-25",
+      "family_structure": "单身",
+      "age_group": "青壮",
+      "total_annual_premium": 1706.19,
+      "insured_persons_summary": [
+        {
+          "person": "self",
+          "policies_count": 1,
+          "active_policies_count": 1,
+          "coverage_summary": {
+            "医疗险": 222747.08
+          },
+          "annual_premium": 1706.19
+        }
+      ],
+      "alerts": [
+        "NO_CRITICAL_ILLNESS: 无有效重疾险覆盖",
+        "NO_ACCIDENT: 无有效意外险覆盖"
+      ],
+      "need_tags": [
+        "大病保障(0.95)",
+        "医疗刚需(0.75)",
+        "出行保障(0.60)"
+      ],
+      "generated_by": "policy-orchestrator",
+      "generated_at": "2026-05-25T12:15:35"
+    },
+    {
+      "user_id": "CUST00000002",
+      "report_date": "2026-05-25",
+      "family_structure": "二人世界",
+      "age_group": "中老",
+      "total_annual_premium": 1476.98,
+      "insured_persons_summary": [
+        {
+          "person": "self",
+          "policies_count": 3,
+          "active_policies_count": 1,
+          "coverage_summary": {
+            "意外险": 0,
+            "重疾险": 417356.29
+          },
+          "annual_premium": 1476.98
+        }
+      ],
+      "alerts": [
+        "NO_MEDICAL: 无有效医疗险覆盖",
+        "NO_ACCIDENT: 无有效意外险覆盖",
+        "NO_ANNUITY_ELDERLY: 老年无养老储蓄工具"
+      ],
+      "need_tags": [
+        "医疗刚需(0.95)",
+        "养老储蓄(0.90)"
+      ],
+      "generated_by": "policy-orchestrator",
+      "generated_at": "2026-05-25T12:15:35"
+    },
+    {
+      "user_id": "CUST00000021",
+      "report_date": "2026-05-25",
+      "family_structure": "独居老人",
+      "age_group": "老年",
+      "total_annual_premium": 3594.2,
+      "insured_persons_summary": [
+        {
+          "person": "self",
+          "policies_count": 4,
+          "active_policies_count": 2,
+          "coverage_summary": {
+            "医疗险": 291222.04,
+            "重疾险": 128345.7,
+            "意外险": 0
+          },
+          "annual_premium": 3594.2
+        }
+      ],
+      "alerts": [
+        "NO_ACCIDENT: 无有效意外险覆盖",
+        "NO_ANNUITY_ELDERLY: 老年无养老储蓄工具"
+      ],
+      "need_tags": [
+        "养老储蓄(0.90)",
+        "大病保障(0.85)",
+        "医疗刚需(0.75)"
+      ],
+      "generated_by": "policy-orchestrator",
+      "generated_at": "2026-05-25T12:15:35"
+    },
+    {
+      "user_id": "CUST00000006",
+      "report_date": "2026-05-25",
+      "family_structure": "三代同堂",
+      "age_group": "中青",
+      "total_annual_premium": 7944.95,
+      "insured_persons_summary": [
+        {
+          "person": "self",
+          "policies_count": 5,
+          "active_policies_count": 2,
+          "coverage_summary": {
+            "家财险": 194807.06,
+            "重疾险": 296060.61
+          },
+          "annual_premium": 7944.95
+        }
+      ],
+      "alerts": [
+        "NO_MEDICAL: 无有效医疗险覆盖",
+        "NO_ACCIDENT: 无有效意外险覆盖",
+        "NO_LIFE_WITH_DEPENDENTS: 有子女但无寿险覆盖"
+      ],
+      "need_tags": [
+        "医疗刚需(0.95)",
+        "家庭责任(0.92)",
+        "子女规划(0.85)",
+        "出行保障(0.60)",
+        "养老储蓄(0.42)"
+      ],
+      "generated_by": "policy-orchestrator",
+      "generated_at": "2026-05-25T12:15:35"
+    }
+  ]
+}

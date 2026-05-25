@@ -1,0 +1,235 @@
+{
+  "user_id": "CUST00000028",
+  "version": "v20260525_001",
+  "generated_at": "2026-05-25T12:05:17",
+  "basic_tags": {
+    "age": 33,
+    "age_group": "青壮",
+    "gender": "male",
+    "marital_status": "离异",
+    "family_structure": "三口之家",
+    "children_count": 1,
+    "has_elderly": false,
+    "education": "大专",
+    "occupation_category": 2,
+    "occupation": "服务业",
+    "annual_income": 101179.73,
+    "income_bracket": "10-20万",
+    "province": "四川",
+    "city_tier": "一线",
+    "region": "西南",
+    "acquisition_channel": "广告投放",
+    "acquisition_date": "2020-09-15",
+    "customer_value_tier": "高净值",
+    "risk_level": "中低风险"
+  },
+  "insurance_tags": {
+    "total_policies": 4,
+    "active_policies": 3,
+    "total_annual_premium": 9431.51,
+    "coverage_matrix": {
+      "医疗险": {
+        "has_coverage": false,
+        "sum_insured": 0.0,
+        "count": 0,
+        "active_count": 0
+      },
+      "重疾险": {
+        "has_coverage": true,
+        "sum_insured": 264663.94,
+        "count": 1,
+        "active_count": 1
+      },
+      "意外险": {
+        "has_coverage": false,
+        "sum_insured": 0.0,
+        "count": 0,
+        "active_count": 0
+      },
+      "寿险": {
+        "has_coverage": true,
+        "sum_insured": 215984.94,
+        "count": 1,
+        "active_count": 1
+      },
+      "年金险": {
+        "has_coverage": false,
+        "sum_insured": 0.0,
+        "count": 0,
+        "active_count": 0
+      },
+      "家财险": {
+        "has_coverage": true,
+        "sum_insured": 66830.12,
+        "count": 1,
+        "active_count": 0
+      },
+      "旅行险": {
+        "has_coverage": true,
+        "sum_insured": 85105.83,
+        "count": 1,
+        "active_count": 1
+      },
+      "少儿险": {
+        "has_coverage": false,
+        "sum_insured": 0.0,
+        "count": 0,
+        "active_count": 0
+      },
+      "老人专项险": {
+        "has_coverage": false,
+        "sum_insured": 0.0,
+        "count": 0,
+        "active_count": 0
+      }
+    },
+    "policy_details": [
+      {
+        "policy_no": "POL0000000051",
+        "product_code": "LX-DY-07",
+        "insurance_type": "旅行险",
+        "status": "续保",
+        "sum_insured": 85105.83,
+        "annual_premium": 1301.33,
+        "effective_date": "2022-10-19",
+        "expiry_date": "2023-10-19",
+        "payment_method": "季交",
+        "sales_channel": "线上直销",
+        "has_claims": true,
+        "cumulative_claim_amount": 44611.46
+      },
+      {
+        "policy_no": "POL0000000052",
+        "product_code": "ZJ-CA-02",
+        "insurance_type": "重疾险",
+        "status": "新保",
+        "sum_insured": 264663.94,
+        "annual_premium": 5296.07,
+        "effective_date": "2026-07-17",
+        "expiry_date": "2027-07-17",
+        "payment_method": "月交",
+        "sales_channel": "银保渠道",
+        "has_claims": true,
+        "cumulative_claim_amount": 62769.49
+      },
+      {
+        "policy_no": "POL0000000053",
+        "product_code": "SX-DS-04",
+        "insurance_type": "寿险",
+        "status": "新保",
+        "sum_insured": 215984.94,
+        "annual_premium": 1356.95,
+        "effective_date": "2025-07-18",
+        "expiry_date": "2040-07-14",
+        "payment_method": "年交",
+        "sales_channel": "线上直销",
+        "has_claims": false,
+        "cumulative_claim_amount": 0.0
+      },
+      {
+        "policy_no": "POL0000000054",
+        "product_code": "ZC-JC-06",
+        "insurance_type": "家财险",
+        "status": "理赔中",
+        "sum_insured": 66830.12,
+        "annual_premium": 1477.16,
+        "effective_date": "2024-01-25",
+        "expiry_date": "2025-01-24",
+        "payment_method": "月交",
+        "sales_channel": "代理人",
+        "has_claims": true,
+        "cumulative_claim_amount": 59815.99
+      }
+    ],
+    "payment_summary": {
+      "total_payment_records": 46,
+      "status_distribution": {
+        "已缴": 37,
+        "豁免": 3,
+        "未缴": 3,
+        "已逾期": 2,
+        "宽限期内": 1
+      }
+    },
+    "social_insurance_type": "城镇职工医保",
+    "social_insurance_reimburse_ratio": 0.8741,
+    "social_insurance_cap": 500000.0,
+    "employer_supplementary": 71812.7,
+    "health_risk_score": 49.04,
+    "occupation_risk_level": 2
+  },
+  "health_tags": {
+    "health_risk_score": 49.04,
+    "disease_history": [],
+    "abnormal_items_count": 0,
+    "has_chronic_disease": false,
+    "disease_severity": "none",
+    "data_completeness": 0.7
+  },
+  "behavior_tags": {
+    "last_interaction": "2024-03-29 07:28:47",
+    "days_since_last_interaction": 787,
+    "interaction_count_30d": 0,
+    "interaction_count_90d": 0,
+    "top_event_types": {
+      "缴费提醒": 9,
+      "缴费成功": 7,
+      "投保": 2,
+      "生效": 2,
+      "理赔报案": 2
+    },
+    "intent_level": "low",
+    "dormancy_score": 7.8,
+    "activity_tier": "lost",
+    "total_events": 29,
+    "has_claim_history": true,
+    "renewal_propensity": 0.6392,
+    "upsell_propensity": 0.8816,
+    "complaint_count": 0
+  },
+  "need_tags": [
+    {
+      "tag": "医疗刚需",
+      "confidence": 0.95,
+      "reason": "无任何医疗险覆盖",
+      "evidence_fields": [
+        "insurance_tags.coverage_matrix.医疗险.has_coverage"
+      ]
+    },
+    {
+      "tag": "大病保障",
+      "confidence": 0.85,
+      "reason": "重疾保额26万不足30万",
+      "evidence_fields": [
+        "insurance_tags.coverage_matrix.重疾险.sum_insured"
+      ]
+    },
+    {
+      "tag": "子女规划",
+      "confidence": 0.85,
+      "reason": "有1个子女但无少儿险/教育金覆盖",
+      "evidence_fields": [
+        "basic_tags.children_count",
+        "insurance_tags.coverage_matrix.少儿险.has_coverage"
+      ]
+    },
+    {
+      "tag": "家庭责任",
+      "confidence": 0.75,
+      "reason": "寿险保额22万低于年收入5倍标准(51万)",
+      "evidence_fields": [
+        "basic_tags.annual_income",
+        "insurance_tags.coverage_matrix.寿险.sum_insured"
+      ]
+    },
+    {
+      "tag": "出行保障",
+      "confidence": 0.6,
+      "reason": "无意外险覆盖",
+      "evidence_fields": [
+        "insurance_tags.coverage_matrix.意外险.has_coverage",
+        "behavior_tags.activity_tier"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,218 @@
+{
+  "user_id": "CUST00000021",
+  "version": "v20260525_001",
+  "generated_at": "2026-05-25T12:05:17",
+  "basic_tags": {
+    "age": 78,
+    "age_group": "老年",
+    "gender": "female",
+    "marital_status": "丧偶",
+    "family_structure": "独居老人",
+    "children_count": 0,
+    "has_elderly": false,
+    "education": "本科",
+    "occupation_category": 2,
+    "occupation": "农民",
+    "annual_income": 104898.57,
+    "income_bracket": "10-20万",
+    "province": "江苏",
+    "city_tier": "三线",
+    "region": "华东",
+    "acquisition_channel": "转介绍",
+    "acquisition_date": "2018-03-20",
+    "customer_value_tier": "高净值",
+    "risk_level": "高风险"
+  },
+  "insurance_tags": {
+    "total_policies": 4,
+    "active_policies": 3,
+    "total_annual_premium": 5525.6,
+    "coverage_matrix": {
+      "医疗险": {
+        "has_coverage": true,
+        "sum_insured": 479235.62,
+        "count": 2,
+        "active_count": 1
+      },
+      "重疾险": {
+        "has_coverage": true,
+        "sum_insured": 128345.7,
+        "count": 1,
+        "active_count": 1
+      },
+      "意外险": {
+        "has_coverage": true,
+        "sum_insured": 28553.89,
+        "count": 1,
+        "active_count": 1
+      },
+      "寿险": {
+        "has_coverage": false,
+        "sum_insured": 0.0,
+        "count": 0,
+        "active_count": 0
+      },
+      "年金险": {
+        "has_coverage": false,
+        "sum_insured": 0.0,
+        "count": 0,
+        "active_count": 0
+      },
+      "家财险": {
+        "has_coverage": false,
+        "sum_insured": 0.0,
+        "count": 0,
+        "active_count": 0
+      },
+      "旅行险": {
+        "has_coverage": false,
+        "sum_insured": 0.0,
+        "count": 0,
+        "active_count": 0
+      },
+      "少儿险": {
+        "has_coverage": false,
+        "sum_insured": 0.0,
+        "count": 0,
+        "active_count": 0
+      },
+      "老人专项险": {
+        "has_coverage": false,
+        "sum_insured": 0.0,
+        "count": 0,
+        "active_count": 0
+      }
+    },
+    "policy_details": [
+      {
+        "policy_no": "POL0000000041",
+        "product_code": "YL-MM-01",
+        "insurance_type": "医疗险",
+        "status": "新保",
+        "sum_insured": 291222.04,
+        "annual_premium": 1716.12,
+        "effective_date": "2022-10-17",
+        "expiry_date": "2042-10-12",
+        "payment_method": "年交",
+        "sales_channel": "电话销售",
+        "has_claims": false,
+        "cumulative_claim_amount": 0.0
+      },
+      {
+        "policy_no": "POL0000000042",
+        "product_code": "ZJ-CA-02",
+        "insurance_type": "重疾险",
+        "status": "加保",
+        "sum_insured": 128345.7,
+        "annual_premium": 1878.08,
+        "effective_date": "2024-11-22",
+        "expiry_date": "2034-11-20",
+        "payment_method": "年交",
+        "sales_channel": "电话销售",
+        "has_claims": false,
+        "cumulative_claim_amount": 0.0
+      },
+      {
+        "policy_no": "POL0000000043",
+        "product_code": "YW-YL-03",
+        "insurance_type": "意外险",
+        "status": "续保",
+        "sum_insured": 28553.89,
+        "annual_premium": 831.67,
+        "effective_date": "2025-01-07",
+        "expiry_date": "2026-01-07",
+        "payment_method": "季交",
+        "sales_channel": "线上直销",
+        "has_claims": true,
+        "cumulative_claim_amount": 13389.07
+      },
+      {
+        "policy_no": "POL0000000044",
+        "product_code": "YL-MM-01",
+        "insurance_type": "医疗险",
+        "status": "失效",
+        "sum_insured": 188013.58,
+        "annual_premium": 1099.73,
+        "effective_date": "2024-11-06",
+        "expiry_date": "2025-11-06",
+        "payment_method": "年交",
+        "sales_channel": "银保渠道",
+        "has_claims": true,
+        "cumulative_claim_amount": 53565.27
+      }
+    ],
+    "payment_summary": {
+      "total_payment_records": 14,
+      "status_distribution": {
+        "已缴": 12,
+        "宽限期内": 1,
+        "未缴": 1
+      }
+    },
+    "social_insurance_type": "城镇职工医保",
+    "social_insurance_reimburse_ratio": 0.8236,
+    "social_insurance_cap": 300000.0,
+    "employer_supplementary": 0.0,
+    "health_risk_score": 41.88,
+    "occupation_risk_level": 2
+  },
+  "health_tags": {
+    "health_risk_score": 41.88,
+    "disease_history": [
+      "慢性胃炎",
+      "高血脂"
+    ],
+    "abnormal_items_count": 3,
+    "has_chronic_disease": true,
+    "disease_severity": "medium",
+    "data_completeness": 0.7
+  },
+  "behavior_tags": {
+    "last_interaction": "2024-01-03 00:54:20",
+    "days_since_last_interaction": 873,
+    "interaction_count_30d": 0,
+    "interaction_count_90d": 0,
+    "top_event_types": {
+      "保单体检": 2,
+      "投保": 1,
+      "生效": 1,
+      "缴费提醒": 1,
+      "缴费成功": 1
+    },
+    "intent_level": "low",
+    "dormancy_score": 7.6,
+    "activity_tier": "lost",
+    "total_events": 6,
+    "has_claim_history": false,
+    "renewal_propensity": 0.5724,
+    "upsell_propensity": 0.8569,
+    "complaint_count": 0
+  },
+  "need_tags": [
+    {
+      "tag": "养老储蓄",
+      "confidence": 0.9,
+      "reason": "年龄78岁无养老储蓄工具",
+      "evidence_fields": [
+        "basic_tags.age",
+        "insurance_tags.coverage_matrix.年金险.has_coverage"
+      ]
+    },
+    {
+      "tag": "大病保障",
+      "confidence": 0.85,
+      "reason": "重疾保额13万不足30万",
+      "evidence_fields": [
+        "insurance_tags.coverage_matrix.重疾险.sum_insured"
+      ]
+    },
+    {
+      "tag": "医疗刚需",
+      "confidence": 0.75,
+      "reason": "医疗险保额48万不足50万",
+      "evidence_fields": [
+        "insurance_tags.coverage_matrix.医疗险.sum_insured"
+      ]
+    }
+  ]
+}

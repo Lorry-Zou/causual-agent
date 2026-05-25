@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-05-25T12:15:35",
+  "total_alerts": 1,
+  "alerts_by_level": {
+    "red": 0,
+    "yellow": 1,
+    "green": 0
+  },
+  "alerts": [
+    {
+      "event_id": "EVT_CUST00000006_POL0000000016_EXPIRY_SPECIAL",
+      "event_type": "expiry_alert",
+      "user_id": "CUST00000006",
+      "policy_no": "POL0000000016",
+      "insurance_type": "重疾险",
+      "triggered_at": "2026-05-25T12:15:35",
+      "days_to_expiry": 13,
+      "alert_level": "yellow",
+      "recommended_action": "renewal_reminder_with_underwriting_check",
+      "note": "Annual-term critical illness policy with reduced coverage; verify re-underwriting needs",
+      "status": "pending"
+    }
+  ]
+}

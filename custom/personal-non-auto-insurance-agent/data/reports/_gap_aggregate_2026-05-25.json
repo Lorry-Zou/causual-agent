@@ -1,0 +1,123 @@
+{
+  "generated_at": "2026-05-25T13:05:16",
+  "trigger": "churn-recovery gap re-engagement",
+  "causal_calibration": "DML+PSM applied",
+  "priority_order": [
+    {
+      "user_id": "CUST00000006",
+      "profile": "三代同堂 / 一线 / income=61,524",
+      "critical": 2,
+      "ci_gap_cal": 42623.0,
+      "life_gap_cal": 3398150.0,
+      "med_gap_cal": 616732.0
+    },
+    {
+      "user_id": "CUST00000011",
+      "profile": "四口之家 / 新一线 / income=59,046",
+      "critical": 2,
+      "ci_gap_cal": 839163.0,
+      "life_gap_cal": 2294958.0,
+      "med_gap_cal": 128934.0
+    },
+    {
+      "user_id": "CUST00000028",
+      "profile": "三口之家 / 一线 / income=101,180",
+      "critical": 1,
+      "ci_gap_cal": 905629.0,
+      "life_gap_cal": 3186619.0,
+      "med_gap_cal": 237632.0
+    },
+    {
+      "user_id": "CUST00000002",
+      "profile": "二人世界 / 二线 / income=40,857",
+      "critical": 1,
+      "ci_gap_cal": 0,
+      "life_gap_cal": 494266.0,
+      "med_gap_cal": 507114.0
+    },
+    {
+      "user_id": "CUST00000126",
+      "profile": "单身 / 三线 / income=32,368",
+      "critical": 1,
+      "ci_gap_cal": 620248.0,
+      "life_gap_cal": 192313.0,
+      "med_gap_cal": 277728.0
+    },
+    {
+      "user_id": "CUST00000021",
+      "profile": "独居老人 / 三线 / income=104,899",
+      "critical": 0,
+      "ci_gap_cal": 888339.0,
+      "life_gap_cal": 246156.0,
+      "med_gap_cal": 0
+    }
+  ],
+  "summary": {
+    "CUST00000011": {
+      "profile": "四口之家 / 新一线",
+      "income": 59046.27,
+      "gaps_calibrated": {
+        "medical": 128934.0,
+        "ci": 839163.0,
+        "life": 2294958.0
+      },
+      "critical_anomalies": 2,
+      "recommended_tier": "balanced"
+    },
+    "CUST00000006": {
+      "profile": "三代同堂 / 一线",
+      "income": 61523.64,
+      "gaps_calibrated": {
+        "medical": 616732.0,
+        "ci": 42623.0,
+        "life": 3398150.0
+      },
+      "critical_anomalies": 2,
+      "recommended_tier": "balanced"
+    },
+    "CUST00000028": {
+      "profile": "三口之家 / 一线",
+      "income": 101179.73,
+      "gaps_calibrated": {
+        "medical": 237632.0,
+        "ci": 905629.0,
+        "life": 3186619.0
+      },
+      "critical_anomalies": 1,
+      "recommended_tier": "premium"
+    },
+    "CUST00000126": {
+      "profile": "单身 / 三线",
+      "income": 32367.61,
+      "gaps_calibrated": {
+        "medical": 277728.0,
+        "ci": 620248.0,
+        "life": 192313.0
+      },
+      "critical_anomalies": 1,
+      "recommended_tier": "minimal"
+    },
+    "CUST00000002": {
+      "profile": "二人世界 / 二线",
+      "income": 40857.06,
+      "gaps_calibrated": {
+        "medical": 507114.0,
+        "ci": 0,
+        "life": 494266.0
+      },
+      "critical_anomalies": 1,
+      "recommended_tier": "minimal"
+    },
+    "CUST00000021": {
+      "profile": "独居老人 / 三线",
+      "income": 104898.57,
+      "gaps_calibrated": {
+        "medical": 0,
+        "ci": 888339.0,
+        "life": 246156.0
+      },
+      "critical_anomalies": 0,
+      "recommended_tier": "premium"
+    }
+  }
+}

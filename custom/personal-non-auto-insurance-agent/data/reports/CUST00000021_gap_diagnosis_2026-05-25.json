@@ -1,0 +1,85 @@
+{
+  "report_id": "GAP20260525_CUST00000021",
+  "user_id": "CUST00000021",
+  "generated_at": "2026-05-25T13:05:16",
+  "trigger": "churn-recovery gap re-engagement",
+  "causal_calibration_applied": true,
+  "causal_methods": [
+    "DML (LinearDML)",
+    "PSM"
+  ],
+  "causal_params": {
+    "ate_income_ci": 4.0527,
+    "ate_burden_life": 107687,
+    "ate_city_medical": 24894,
+    "ate_city_life": 248109,
+    "ate_age_ci": -4079
+  },
+  "user_segment": "独居老人_三线_10.0w",
+  "gap_analysis": {
+    "medical_gap": {
+      "raw": 0,
+      "calibrated": 0,
+      "adjustment": 0,
+      "adjustment_note": "City tier ATE: +24894/level"
+    },
+    "critical_illness_gap": {
+      "required_raw": 969594.0,
+      "existing": 128346.0,
+      "raw": 841249.0,
+      "calibrated": 888339.0,
+      "adjustment": 222487.0,
+      "adjustment_note": "Income ATE: 4.0527/yuan"
+    },
+    "life_gap": {
+      "required_raw": 300000,
+      "existing": 0,
+      "raw": 300000,
+      "calibrated": 246156.0,
+      "adjustment": -53844.0,
+      "adjustment_note": "Burden ATE: 107687/unit + City ATE: 248109/level"
+    }
+  },
+  "anomalies": [
+    {
+      "type": "保额不足",
+      "detail": "重疾保额缺口87%",
+      "severity": "high"
+    },
+    {
+      "type": "险种错配",
+      "detail": "65岁以上重疾险杠杆极低,建议转医疗+意外+护理",
+      "severity": "medium"
+    }
+  ],
+  "plans": {
+    "minimal": {
+      "products": [],
+      "total_premium": 0,
+      "pct_income": 0.0
+    },
+    "balanced": {
+      "products": [],
+      "total_premium": 0,
+      "pct_income": 0.0
+    },
+    "premium": {
+      "products": [
+        {
+          "product": "高端医疗险",
+          "coverage": "1000万",
+          "premium": 32000,
+          "priority": 1
+        },
+        {
+          "product": "年金险",
+          "coverage": "养老储蓄",
+          "premium": 10000,
+          "priority": 5
+        }
+      ],
+      "total_premium": 42000,
+      "pct_income": 40.0
+    }
+  }
+}

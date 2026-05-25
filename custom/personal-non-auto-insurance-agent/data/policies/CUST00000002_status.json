@@ -1,0 +1,62 @@
+{
+  "user_id": "CUST00000002",
+  "inspection_time": "2026-05-25T12:15:35",
+  "policies": [
+    {
+      "policy_no": "POL0000000005",
+      "insurance_type": "意外险",
+      "original_status": "续保",
+      "inferred_state": "到期终止",
+      "sum_insured": 155738.59,
+      "annual_premium": 1456.73,
+      "effective_date": "2024-04-03",
+      "expiry_date": "2025-04-03",
+      "days_to_expiry": -417,
+      "days_past_expiry": 417,
+      "is_short_term": true,
+      "has_claims": false,
+      "cumulative_claim_amount": 0,
+      "state_updated_at": "2026-05-25T12:15:35"
+    },
+    {
+      "policy_no": "POL0000000006",
+      "insurance_type": "重疾险",
+      "original_status": "续保",
+      "inferred_state": "到期终止",
+      "sum_insured": 238355.71,
+      "annual_premium": 1896.29,
+      "effective_date": "2023-12-15",
+      "expiry_date": "2024-12-14",
+      "days_to_expiry": -527,
+      "days_past_expiry": 527,
+      "is_short_term": false,
+      "has_claims": false,
+      "cumulative_claim_amount": 0,
+      "state_updated_at": "2026-05-25T12:15:35"
+    },
+    {
+      "policy_no": "POL0000000007",
+      "insurance_type": "重疾险",
+      "original_status": "新保",
+      "inferred_state": "生效中",
+      "sum_insured": 417356.29,
+      "annual_premium": 1476.98,
+      "effective_date": "2025-08-14",
+      "expiry_date": "2045-08-09",
+      "days_to_expiry": 7016,
+      "days_past_expiry": 0,
+      "is_short_term": false,
+      "has_claims": false,
+      "cumulative_claim_amount": 0,
+      "state_updated_at": "2026-05-25T12:15:35"
+    }
+  ],
+  "summary": {
+    "total": 3,
+    "active": 1,
+    "pending": 0,
+    "grace": 0,
+    "terminated": 2,
+    "other": 0
+  }
+}

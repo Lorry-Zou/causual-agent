@@ -1,0 +1,149 @@
+{
+  "generated_at": "2026-05-25T12:59:37",
+  "causal_model_version": "v2024Q4_PSM",
+  "causal_key_findings": {
+    "claim_disputes": "ATT=+0.2143 (p<0.001) - 强因果效应",
+    "interaction_count": "ATT=-0.1884 (p=0.002) - 强保护效应",
+    "other_factors": "premium_ratio, product_switches, policy_count, gap_total_score 均不显著"
+  },
+  "total_plans": 5,
+  "gap_reactivation_triggered": [
+    "CUST00000006"
+  ],
+  "ab_test_suggestions": [
+    {
+      "test": "理赔纠纷型: 人工电话 vs 理赔短信",
+      "users": [
+        "CUST00000028",
+        "CUST00000011",
+        "CUST00000021"
+      ]
+    },
+    {
+      "test": "遗忘型: 简单提醒 vs 缺口再触达",
+      "users": []
+    }
+  ],
+  "plans": [
+    {
+      "user_id": "CUST00000028",
+      "user_segment": "青壮_三口之家_高净值",
+      "primary_cause": "理赔纠纷型",
+      "cause_key": "claim_dispute",
+      "override_to_gap": false,
+      "strategy": "理赔进度同步+专属客服介入",
+      "channel": "人工电话跟进",
+      "expected_conversion": "低",
+      "message": "[理赔服务] 关于您保单的理赔事宜，专属客服将致电为您跟进处理。如有疑问请回复CALL>>",
+      "total_gap": 3696529,
+      "top_gap": "寿险: 2,876,621元",
+      "churned_policies": [
+        {
+          "policy_no": "POL0000000051",
+          "type": "旅行险",
+          "days_past": 949
+        }
+      ],
+      "follow_up_date": "2026-06-01T12:59:37"
+    },
+    {
+      "user_id": "CUST00000011",
+      "user_segment": "青壮_四口之家_大众",
+      "primary_cause": "理赔纠纷型",
+      "cause_key": "claim_dispute",
+      "override_to_gap": false,
+      "strategy": "理赔进度同步+专属客服介入",
+      "channel": "人工电话跟进",
+      "expected_conversion": "低",
+      "message": "[理赔服务] 关于您保单的理赔事宜，专属客服将致电为您跟进处理。如有疑问请回复CALL>>",
+      "total_gap": 2392504,
+      "top_gap": "寿险: 1,774,672元",
+      "churned_policies": [
+        {
+          "policy_no": "POL0000000025",
+          "type": "医疗险",
+          "days_past": 553
+        }
+      ],
+      "follow_up_date": "2026-06-01T12:59:37"
+    },
+    {
+      "user_id": "CUST00000002",
+      "user_segment": "中老_二人世界_核心",
+      "primary_cause": "价格敏感型",
+      "cause_key": "price_sensitivity",
+      "override_to_gap": false,
+      "strategy": "优惠券/保费折扣/降低保额方案",
+      "channel": "短信+App Push",
+      "expected_conversion": "中",
+      "message": "[专属优惠] 您的意外险/重疾险保障已中断。我们为您准备了专属保费折扣，续保立享优惠>>",
+      "total_gap": 255345,
+      "top_gap": "医疗险: 155,345元",
+      "churned_policies": [
+        {
+          "policy_no": "POL0000000005",
+          "type": "意外险",
+          "days_past": 417
+        },
+        {
+          "policy_no": "POL0000000006",
+          "type": "重疾险",
+          "days_past": 527
+        }
+      ],
+      "follow_up_date": "2026-06-01T12:59:37"
+    },
+    {
+      "user_id": "CUST00000021",
+      "user_segment": "老年_独居老人_高净值",
+      "primary_cause": "理赔纠纷型",
+      "cause_key": "claim_dispute",
+      "override_to_gap": false,
+      "strategy": "理赔进度同步+专属客服介入",
+      "channel": "人工电话跟进",
+      "expected_conversion": "低",
+      "message": "[理赔服务] 关于您保单的理赔事宜，专属客服将致电为您跟进处理。如有疑问请回复CALL>>",
+      "total_gap": 235263,
+      "top_gap": "重疾险: 135,263元",
+      "churned_policies": [
+        {
+          "policy_no": "POL0000000043",
+          "type": "意外险",
+          "days_past": 138
+        },
+        {
+          "policy_no": "POL0000000044",
+          "type": "医疗险",
+          "days_past": 200
+        }
+      ],
+      "follow_up_date": "2026-06-01T12:59:37"
+    },
+    {
+      "user_id": "CUST00000006",
+      "user_segment": "中青_三代同堂_高净值",
+      "primary_cause": "价格敏感型",
+      "cause_key": "price_sensitivity",
+      "override_to_gap": true,
+      "strategy": "保障缺口再触达(升级策略)",
+      "channel": "微信公众号+短信+App Push",
+      "expected_conversion": "中高",
+      "message": "[紧急保障提醒] 您的家庭保障缺口高达4,584,653元，其中寿险缺口4,247,311元。系统强烈建议立即补足保障，免费获取缺口报告>>",
+      "total_gap": 4584653,
+      "top_gap": "寿险: 4,247,311元",
+      "churned_policies": [
+        {
+          "policy_no": "POL0000000015",
+          "type": "重疾险",
+          "days_past": 947
+        },
+        {
+          "policy_no": "POL0000000017",
+          "type": "重疾险",
+          "days_past": 697
+        }
+      ],
+      "follow_up_date": "2026-06-01T12:59:37"
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+{
+  "causal_gap_calibration_result.json": "因果推断结果: gap_calibration",
+  "diagnosis_result.txt": "保障缺口诊断完整输出（社保比对/缺口量化/因果校准/三档方案/推荐排序）"
+}

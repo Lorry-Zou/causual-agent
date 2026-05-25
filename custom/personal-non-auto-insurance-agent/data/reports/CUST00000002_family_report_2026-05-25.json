@@ -1,0 +1,30 @@
+{
+  "user_id": "CUST00000002",
+  "report_date": "2026-05-25",
+  "family_structure": "二人世界",
+  "age_group": "中老",
+  "total_annual_premium": 1476.98,
+  "insured_persons_summary": [
+    {
+      "person": "self",
+      "policies_count": 3,
+      "active_policies_count": 1,
+      "coverage_summary": {
+        "意外险": 0,
+        "重疾险": 417356.29
+      },
+      "annual_premium": 1476.98
+    }
+  ],
+  "alerts": [
+    "NO_MEDICAL: 无有效医疗险覆盖",
+    "NO_ACCIDENT: 无有效意外险覆盖",
+    "NO_ANNUITY_ELDERLY: 老年无养老储蓄工具"
+  ],
+  "need_tags": [
+    "医疗刚需(0.95)",
+    "养老储蓄(0.90)"
+  ],
+  "generated_by": "policy-orchestrator",
+  "generated_at": "2026-05-25T12:15:35"
+}

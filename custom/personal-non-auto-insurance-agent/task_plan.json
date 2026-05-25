@@ -1,0 +1,280 @@
+{
+  "agents_to_create": [
+    {
+      "name": "profile-modeler",
+      "role": "用户画像建模器，聚合多维数据构建C端用户全维度画像",
+      "responsibilities": [
+        "采集并整合用户基础标签（年龄、性别、职业、地域、收入、家庭结构）",
+        "汇总已购保单数据生成保障标签（保单清单、保额、到期时间、缴费状态、险种覆盖矩阵）",
+        "关联健康数据生成健康标签（体检异常、既往病史、就医记录、核保结果）",
+        "追踪用户交互行为生成行为标签（咨询偏好、投保意向、拒单原因、互动频次、沉睡/活跃等级）",
+        "推断并标注需求标签（医疗刚需、大病保障、家庭责任、养老储蓄、子女规划、出行保障）",
+        "维护用户画像的持续更新与版本管理，输出结构化画像数据供下游Agent消费"
+      ],
+      "tools_needed": [
+        "python_exec",
+        "read_skill",
+        "file_read",
+        "file_write"
+      ],
+      "interaction_with_causal_layer": "不需要直接调用因果推断层，但输出的画像数据（如需求标签与行为标签的关联）可作为因果分析的输入特征"
+    },
+    {
+      "name": "policy-orchestrator",
+      "role": "保单全生命周期管家，自动化管理保单从生效到终止的全流程事件",
+      "responsibilities": [
+        "短期险到期预警：按提前30/15/7天分级触发续保提醒",
+        "缴费管理：保费扣款提醒、宽限期预警、保单失效预警、复效引导",
+        "保单托管：一键整理家庭全部保单、生成保障汇总报告、年度保单体检",
+        "信息批改指引：受益人变更、联系方式修改、投保人变更的操作指引与合规校验",
+        "保单状态实时同步：缴费状态、生效/失效/复效/终止状态追踪",
+        "与gap-diagnosis-engine协同，将最新保单数据推送至缺口诊断流程"
+      ],
+      "tools_needed": [
+        "python_exec",
+        "read_skill",
+        "file_read",
+        "file_write",
+        "shell_exec"
+      ],
+      "interaction_with_causal_layer": "不需要直接调用，但保单状态变更数据（如失效、未续保）需传递给churn-recovery-agent供因果分析使用"
+    },
+    {
+      "name": "gap-diagnosis-engine",
+      "role": "保障缺口诊断引擎，自动比对社保+商保，量化测算各险种缺口并生成分级配置方案",
+      "responsibilities": [
+        "自动比对社保与商保覆盖范围，测算医疗报销缺口（自费比例、封顶线差额、目录外费用）",
+        "测算重疾保额缺口：基于治疗费用+收入损失+康复费用模型计算所需保额",
+        "测算家庭负债寿险缺口：房贷余额+子女教育金+赡养费减去现有寿险保额",
+        "识别重复投保（同险种多保单叠加）、保障缺失（险种空白）、保额不足、险种错配",
+        "按家庭预算自动生成三档方案：极简版（刚需兜底）、全面版（均衡配置）、高端版（品质保障）",
+        "智能分级推荐：刚需优先（医疗/意外）→升级保障（重疾/寿险）→理财储蓄（年金/增额寿）逐级引导",
+        "输出结构化的缺口诊断报告，包含量化缺口数据与方案对比"
+      ],
+      "tools_needed": [
+        "python_exec",
+        "read_skill",
+        "file_read",
+        "file_write",
+        "run_causal_analysis"
+      ],
+      "interaction_with_causal_layer": "需要调用因果推断层。在测算缺口时，通过因果分析识别「哪些因素真正驱动保额不足」（如收入水平、家庭结构、地域对保障缺口规模的因果效应），从而为不同画像用户校准缺口测算模型参数和推荐权重"
+    },
+    {
+      "name": "churn-recovery-agent",
+      "role": "流失召回专家，判定未续保原因并生成精准召回策略",
+      "responsibilities": [
+        "识别流失用户：监测短期险到期未续、长险失效/退保用户",
+        "流失原因判定：基于用户画像+行为数据+保单数据，分类归因（价格敏感型、产品不满型、需求变化型、遗忘型、理赔纠纷型）",
+        "构建流失归因模型：利用因果推断区分相关性因素与因果性因素",
+        "精准召回策略推送：按流失类型匹配差异化召回方案（优惠券/产品替换/保障缺口再触达/人工跟进）",
+        "召回效果跟踪：A/B测试不同策略的召回转化率并迭代优化",
+        "沉睡用户激活：对互动频次低于阈值的用户主动推送保障体检或保单整理服务"
+      ],
+      "tools_needed": [
+        "python_exec",
+        "read_skill",
+        "file_read",
+        "file_write",
+        "run_causal_analysis"
+      ],
+      "interaction_with_causal_layer": "需要调用因果推断层。核心场景：对历史流失用户数据进行因果分析，识别「导致流失的真正原因」（而非仅相关性），例如：是保费价格导致流失还是理赔体验导致流失？通过反事实推理评估不同干预策略的预期效果，为召回策略选择提供因果证据"
+    }
+  ],
+  "knowledge_requirements": [
+    {
+      "agent_name": "profile-modeler",
+      "topic": "用户画像建模方法论",
+      "description": "保险行业用户分层方法论、RFM模型在保险场景的适配、家庭生命周期与保险需求映射关系、标签体系构建最佳实践",
+      "user_uploaded": false,
+      "necessity": "critical"
+    },
+    {
+      "agent_name": "profile-modeler",
+      "topic": "险种产品知识库",
+      "description": "个人医疗、重疾、意外、寿险、年金、增额寿、家财险、旅游险、少儿/老人专项险的产品定位与适用人群画像，用于精准匹配需求标签",
+      "user_uploaded": false,
+      "necessity": "critical"
+    },
+    {
+      "agent_name": "profile-modeler",
+      "topic": "核保医学基础",
+      "description": "常见体检异常（结节、三高、BMI异常等）的核保结论倾向、既往症分类与承保可能性，用于健康标签的准确标注",
+      "user_uploaded": false,
+      "necessity": "helpful"
+    },
+    {
+      "agent_name": "policy-orchestrator",
+      "topic": "险种条款与投保规则",
+      "description": "各险种投保年龄、职业限制、健康告知、免责条款、等待期、缴费期、领取规则、续保规则（保证续保/非保证续保）",
+      "user_uploaded": false,
+      "necessity": "critical"
+    },
+    {
+      "agent_name": "policy-orchestrator",
+      "topic": "保险行业合规规则库",
+      "description": "银保监合规话术规范、销售禁语清单、利益演示格式要求、双录操作要点、异地投保规则、既往症核保常识",
+      "user_uploaded": false,
+      "necessity": "critical"
+    },
+    {
+      "agent_name": "policy-orchestrator",
+      "topic": "保单管理运营规范",
+      "description": "宽限期计算规则（60天）、复效期规则（2年）、保费豁免触发条件、犹豫期退保流程、保单贷款规则",
+      "user_uploaded": false,
+      "necessity": "critical"
+    },
+    {
+      "agent_name": "policy-orchestrator",
+      "topic": "政策动态库",
+      "description": "监管新规、产品停售/上新通知、费率调整公告、健康险新规，用于触发保单批改提醒与续保策略调整",
+      "user_uploaded": false,
+      "necessity": "helpful"
+    },
+    {
+      "agent_name": "gap-diagnosis-engine",
+      "topic": "社保体系与商保衔接",
+      "description": "医保三大目录（药品/诊疗/耗材）、起付线/封顶线/报销比例、大病保险、惠民保政策、各地医保差异，用于精确测算医疗报销缺口",
+      "user_uploaded": false,
+      "necessity": "critical"
+    },
+    {
+      "agent_name": "gap-diagnosis-engine",
+      "topic": "保险精算与保额测算模型",
+      "description": "重疾治疗费用基准（含不同城市等级）、收入损失补偿年限模型、家庭负债寿险计算模型、教育金与养老储蓄目标测算方法",
+      "user_uploaded": false,
+      "necessity": "critical"
+    },
+    {
+      "agent_name": "gap-diagnosis-engine",
+      "topic": "理赔标准库",
+      "description": "各类险种理赔条件、所需材料清单、报销比例阶梯、理赔流程节点、拒赔常见原因分类、就医范围限制（公立/私立、境内/境外）",
+      "user_uploaded": false,
+      "necessity": "critical"
+    },
+    {
+      "agent_name": "gap-diagnosis-engine",
+      "topic": "险种产品知识库",
+      "description": "全险种条款细节、典型产品费率区间，用于方案生成时的产品匹配与预算估算",
+      "user_uploaded": false,
+      "necessity": "critical"
+    },
+    {
+      "agent_name": "churn-recovery-agent",
+      "topic": "保险用户流失归因方法论",
+      "description": "保险行业用户流失的典型原因分类体系、续保决策行为学模型、不同险种的续保率基准数据、召回策略设计与A/B测试框架",
+      "user_uploaded": false,
+      "necessity": "critical"
+    },
+    {
+      "agent_name": "churn-recovery-agent",
+      "topic": "客户关系管理与营销策略",
+      "description": "沉睡用户激活方法论、保险交叉销售与升级销售策略、保障缺口再触达话术、优惠券/折扣合规边界",
+      "user_uploaded": false,
+      "necessity": "helpful"
+    },
+    {
+      "agent_name": "churn-recovery-agent",
+      "topic": "理赔标准库与投诉处理",
+      "description": "理赔纠纷常见场景与处理规范、拒赔正当性判断标准，用于区分「理赔体验差导致流失」与「误解理赔条件导致流失」",
+      "user_uploaded": false,
+      "necessity": "helpful"
+    }
+  ],
+  "workflow": {
+    "description": "以用户画像建模为起点，保单全生命周期管理为常态运行底座，保障缺口诊断为周期性核心分析能力，流失召回为兜底挽回机制。profile-modeler持续更新画像并推送给下游；policy-orchestrator实时管理保单状态并定期触发缺口诊断；gap-diagnosis-engine接收画像+保单数据后执行缺口分析并生成方案；churn-recovery-agent监听保单异常状态（失效/未续保）后启动流失归因与召回。四个Agent形成「画像→管理→诊断→召回」闭环。",
+    "steps": [
+      {
+        "order": 1,
+        "agent": "profile-modeler",
+        "action": "采集用户多维数据（基础信息、保单数据、健康数据、行为日志），完成用户画像建模与标签体系构建，输出结构化画像JSON",
+        "depends_on": [],
+        "output_to": [
+          "policy-orchestrator",
+          "gap-diagnosis-engine",
+          "churn-recovery-agent"
+        ]
+      },
+      {
+        "order": 2,
+        "agent": "policy-orchestrator",
+        "action": "基于用户画像中的保障标签，建立家庭保单台账，启动定时巡检任务（到期预警、缴费提醒、保单体检），维护保单全生命周期状态机",
+        "depends_on": [
+          "profile-modeler"
+        ],
+        "output_to": [
+          "gap-diagnosis-engine",
+          "churn-recovery-agent"
+        ]
+      },
+      {
+        "order": 3,
+        "agent": "gap-diagnosis-engine",
+        "action": "接收最新画像数据与保单状态数据，执行保障缺口诊断：社保商保比对→医疗/重疾/寿险缺口量化→重复/缺失/不足/错配识别",
+        "depends_on": [
+          "profile-modeler",
+          "policy-orchestrator"
+        ],
+        "output_to": [
+          "churn-recovery-agent"
+        ]
+      },
+      {
+        "order": 4,
+        "agent": "gap-diagnosis-engine",
+        "action": "调用因果推断层，按用户分群校准缺口测算模型参数（如不同收入水平对重疾保额缺口的因果效应），生成校准后的量化缺口结果",
+        "depends_on": [
+          "profile-modeler",
+          "policy-orchestrator"
+        ],
+        "output_to": []
+      },
+      {
+        "order": 5,
+        "agent": "gap-diagnosis-engine",
+        "action": "基于校准后的缺口数据与用户预算，生成极简版/全面版/高端版三档家庭配置方案，按刚需→升级→理财逐级推荐排序，输出诊断报告",
+        "depends_on": [],
+        "output_to": [
+          "churn-recovery-agent"
+        ]
+      },
+      {
+        "order": 6,
+        "agent": "churn-recovery-agent",
+        "action": "持续监听保单状态变更事件：当检测到保单失效、到期未续、长险退保时，触发流失判定流程",
+        "depends_on": [
+          "policy-orchestrator"
+        ],
+        "output_to": []
+      },
+      {
+        "order": 7,
+        "agent": "churn-recovery-agent",
+        "action": "调用因果推断层对历史流失数据进行因果归因分析，输出「流失原因→因果效应强度」矩阵，为当前流失用户匹配最优召回策略",
+        "depends_on": [
+          "profile-modeler"
+        ],
+        "output_to": []
+      },
+      {
+        "order": 8,
+        "agent": "churn-recovery-agent",
+        "action": "执行差异化召回：按流失类型推送对应策略（优惠/产品替换/缺口再触达/人工跟进），并跟踪召回转化效果用于策略迭代",
+        "depends_on": [],
+        "output_to": [
+          "gap-diagnosis-engine"
+        ]
+      }
+    ]
+  },
+  "causal_layer_usage": {
+    "needed": true,
+    "usage_description": "因果推断层在系统中承担两个关键职能：第一，保障缺口诊断引擎调用因果分析以识别「哪些用户特征真正驱动保额缺口规模」（如收入水平、家庭结构对不同险种缺口的因果效应），从而为不同画像分群校准缺口测算模型参数，避免相关性误导导致的缺口误判；第二，流失召回专家调用因果分析对历史流失数据进行反事实推理，区分「导致流失的因果因素」与「仅相关的伴随因素」（如理赔纠纷是否真正导致流失而非仅伴随高保费），评估不同干预策略的预期因果效应（ATE/CATE），为召回策略选择提供因果证据而非统计相关性。",
+    "trigger_points": [
+      "周期性触发：每月/每季度对全量用户画像分群执行因果分析，更新「用户特征→保障缺口」的因果效应估计，用于缺口模型校准",
+      "诊断触发：单个用户执行保障缺口诊断时，读取该用户所在分群的最新因果效应参数，个性化调整缺口测算结果",
+      "流失事件触发：当单个用户发生保单失效/未续保时，对该用户进行个体层面的因果归因（基于分群因果模型+个体特征），判定最可能的流失原因",
+      "策略评估触发：当需要对比多种召回策略的预期效果时，基于历史因果效应数据对不同策略进行反事实预测，排序选择最优策略"
+    ]
+  }
+}

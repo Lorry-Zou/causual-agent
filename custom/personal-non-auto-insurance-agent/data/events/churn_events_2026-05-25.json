@@ -1,0 +1,95 @@
+{
+  "generated_at": "2026-05-25T12:59:37",
+  "total_events": 8,
+  "total_users": 5,
+  "events": [
+    {
+      "event_id": "EVT_CUST00000028_POL0000000051_LAPSE",
+      "user_id": "CUST00000028",
+      "policy_no": "POL0000000051",
+      "insurance_type": "旅行险",
+      "churn_type": "expiry_no_renewal",
+      "days_past_expiry": 949,
+      "sum_insured_lost": 85105.83,
+      "annual_premium_lost": 1301.33,
+      "detected_at": "2026-05-25T12:59:37"
+    },
+    {
+      "event_id": "EVT_CUST00000011_POL0000000025_LAPSE",
+      "user_id": "CUST00000011",
+      "policy_no": "POL0000000025",
+      "insurance_type": "医疗险",
+      "churn_type": "expiry_no_renewal",
+      "days_past_expiry": 553,
+      "sum_insured_lost": 151933.5,
+      "annual_premium_lost": 1579.57,
+      "detected_at": "2026-05-25T12:59:37"
+    },
+    {
+      "event_id": "EVT_CUST00000002_POL0000000005_LAPSE",
+      "user_id": "CUST00000002",
+      "policy_no": "POL0000000005",
+      "insurance_type": "意外险",
+      "churn_type": "expiry_no_renewal",
+      "days_past_expiry": 417,
+      "sum_insured_lost": 155738.59,
+      "annual_premium_lost": 1456.73,
+      "detected_at": "2026-05-25T12:59:37"
+    },
+    {
+      "event_id": "EVT_CUST00000002_POL0000000006_LAPSE",
+      "user_id": "CUST00000002",
+      "policy_no": "POL0000000006",
+      "insurance_type": "重疾险",
+      "churn_type": "expiry_no_renewal",
+      "days_past_expiry": 527,
+      "sum_insured_lost": 238355.71,
+      "annual_premium_lost": 1896.29,
+      "detected_at": "2026-05-25T12:59:37"
+    },
+    {
+      "event_id": "EVT_CUST00000021_POL0000000043_LAPSE",
+      "user_id": "CUST00000021",
+      "policy_no": "POL0000000043",
+      "insurance_type": "意外险",
+      "churn_type": "expiry_no_renewal",
+      "days_past_expiry": 138,
+      "sum_insured_lost": 28553.89,
+      "annual_premium_lost": 831.67,
+      "detected_at": "2026-05-25T12:59:37"
+    },
+    {
+      "event_id": "EVT_CUST00000021_POL0000000044_LAPSE",
+      "user_id": "CUST00000021",
+      "policy_no": "POL0000000044",
+      "insurance_type": "医疗险",
+      "churn_type": "lapsed",
+      "days_past_expiry": 200,
+      "sum_insured_lost": 188013.58,
+      "annual_premium_lost": 1099.73,
+      "detected_at": "2026-05-25T12:59:37"
+    },
+    {
+      "event_id": "EVT_CUST00000006_POL0000000015_LAPSE",
+      "user_id": "CUST00000006",
+      "policy_no": "POL0000000015",
+      "insurance_type": "重疾险",
+      "churn_type": "expiry_no_renewal",
+      "days_past_expiry": 947,
+      "sum_insured_lost": 384784.37,
+      "annual_premium_lost": 1946.46,
+      "detected_at": "2026-05-25T12:59:37"
+    },
+    {
+      "event_id": "EVT_CUST00000006_POL0000000017_LAPSE",
+      "user_id": "CUST00000006",
+      "policy_no": "POL0000000017",
+      "insurance_type": "重疾险",
+      "churn_type": "expiry_no_renewal",
+      "days_past_expiry": 697,
+      "sum_insured_lost": 305928.7,
+      "annual_premium_lost": 1513.67,
+      "detected_at": "2026-05-25T12:59:37"
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "user_id": "CUST00000006",
+  "report_date": "2026-05-25",
+  "family_structure": "三代同堂",
+  "age_group": "中青",
+  "total_annual_premium": 7944.95,
+  "insured_persons_summary": [
+    {
+      "person": "self",
+      "policies_count": 5,
+      "active_policies_count": 2,
+      "coverage_summary": {
+        "家财险": 194807.06,
+        "重疾险": 296060.61
+      },
+      "annual_premium": 7944.95
+    }
+  ],
+  "alerts": [
+    "NO_MEDICAL: 无有效医疗险覆盖",
+    "NO_ACCIDENT: 无有效意外险覆盖",
+    "NO_LIFE_WITH_DEPENDENTS: 有子女但无寿险覆盖"
+  ],
+  "need_tags": [
+    "医疗刚需(0.95)",
+    "家庭责任(0.92)",
+    "子女规划(0.85)",
+    "出行保障(0.60)",
+    "养老储蓄(0.42)"
+  ],
+  "generated_by": "policy-orchestrator",
+  "generated_at": "2026-05-25T12:15:35"
+}

@@ -1,0 +1,486 @@
+{
+  "meta": {
+    "n_observations": 200,
+    "data_type": "cross-section",
+    "methods": [
+      "DML (LinearDML)",
+      "PSM (Propensity Score Matching)"
+    ],
+    "effects": [
+      "ci_gap",
+      "life_gap",
+      "medical_gap"
+    ],
+    "treatments": [
+      "income_numeric",
+      "age",
+      "family_burden",
+      "city_tier_code"
+    ],
+    "confounders": [
+      "has_medical",
+      "has_ci",
+      "has_life"
+    ]
+  },
+  "ate_summary": {
+    "income_numeric->ci_gap": {
+      "double_ml": {
+        "ate": 4.052667335034372,
+        "se": null,
+        "ci_lower": 3.165585492553802,
+        "ci_upper": 4.939749177514943,
+        "p_value": 3.4178957215781305e-19,
+        "significant": true,
+        "n_matched": null,
+        "smd_before": null,
+        "smd_after": null,
+        "balance_improved": null
+      },
+      "propensity_score": {
+        "ate": 483417.60875,
+        "se": 47253.187093098546,
+        "ci_lower": 390801.36204752687,
+        "ci_upper": 576033.8554524732,
+        "p_value": 3.4408597471739256e-17,
+        "significant": true,
+        "n_matched": 100,
+        "smd_before": 0.0,
+        "smd_after": 0.07006409051478915,
+        "balance_improved": false
+      }
+    },
+    "age->ci_gap": {
+      "double_ml": {
+        "ate": -4079.2065368262656,
+        "se": null,
+        "ci_lower": -7938.281008819453,
+        "ci_upper": -220.13206483307886,
+        "p_value": 0.03828375047402519,
+        "significant": true,
+        "n_matched": null,
+        "smd_before": null,
+        "smd_after": null,
+        "balance_improved": null
+      },
+      "propensity_score": {
+        "ate": -97921.64125,
+        "se": 50754.54631274258,
+        "ci_lower": -197400.55202297546,
+        "ci_upper": 1557.2695229754609,
+        "p_value": 0.056554670135065974,
+        "significant": false,
+        "n_matched": 100,
+        "smd_before": 0.0,
+        "smd_after": 0.0673612671801861,
+        "balance_improved": false
+      }
+    },
+    "family_burden->ci_gap": {
+      "double_ml": {
+        "ate": 16554.695447088605,
+        "se": null,
+        "ci_lower": -88.93127650615861,
+        "ci_upper": 33198.32217068337,
+        "p_value": 0.051232497264634795,
+        "significant": false,
+        "n_matched": null,
+        "smd_before": null,
+        "smd_after": null,
+        "balance_improved": null
+      },
+      "propensity_score": {
+        "ate": 194956.07449494948,
+        "se": 53689.64323637806,
+        "ci_lower": 89724.37375164848,
+        "ci_upper": 300187.7752382505,
+        "p_value": 0.0004509279248430299,
+        "significant": true,
+        "n_matched": 99,
+        "smd_before": 0.18716507966227927,
+        "smd_after": 0.09490916108818163,
+        "balance_improved": true
+      }
+    },
+    "city_tier_code->ci_gap": {
+      "double_ml": {
+        "ate": 47542.55943746539,
+        "se": null,
+        "ci_lower": -11998.154880248294,
+        "ci_upper": 107083.27375517908,
+        "p_value": 0.1175742513554348,
+        "significant": false,
+        "n_matched": null,
+        "smd_before": null,
+        "smd_after": null,
+        "balance_improved": null
+      },
+      "propensity_score": {
+        "ate": 114468.21837349398,
+        "se": 66175.72797725165,
+        "ci_lower": -15236.208461919246,
+        "ci_upper": 244172.6452089072,
+        "p_value": 0.08743541672307777,
+        "significant": false,
+        "n_matched": 83,
+        "smd_before": 0.0,
+        "smd_after": 0.0668115224315262,
+        "balance_improved": false
+      }
+    },
+    "income_numeric->life_gap": {
+      "double_ml": {
+        "ate": 1.155812773286657,
+        "se": null,
+        "ci_lower": -0.516311240445201,
+        "ci_upper": 2.827936787018515,
+        "p_value": 0.17548139681345143,
+        "significant": false,
+        "n_matched": null,
+        "smd_before": null,
+        "smd_after": null,
+        "balance_improved": null
+      },
+      "propensity_score": {
+        "ate": 156000.0,
+        "se": 77983.68127662702,
+        "ci_lower": 3151.9846978110436,
+        "ci_upper": 308848.0153021889,
+        "p_value": 0.048193744183645505,
+        "significant": true,
+        "n_matched": 100,
+        "smd_before": 0.0,
+        "smd_after": 0.07006409051478915,
+        "balance_improved": false
+      }
+    },
+    "age->life_gap": {
+      "double_ml": {
+        "ate": -7399.841131257992,
+        "se": null,
+        "ci_lower": -17428.947672499486,
+        "ci_upper": 2629.2654099835017,
+        "p_value": 0.14813244464206043,
+        "significant": false,
+        "n_matched": null,
+        "smd_before": null,
+        "smd_after": null,
+        "balance_improved": null
+      },
+      "propensity_score": {
+        "ate": -275000.0,
+        "se": 90256.36886786507,
+        "ci_lower": -451902.4829810155,
+        "ci_upper": -98097.51701898448,
+        "p_value": 0.002964397752991057,
+        "significant": true,
+        "n_matched": 100,
+        "smd_before": 0.0,
+        "smd_after": 0.0673612671801861,
+        "balance_improved": false
+      }
+    },
+    "family_burden->life_gap": {
+      "double_ml": {
+        "ate": 107686.98680881251,
+        "se": null,
+        "ci_lower": 63108.66045921657,
+        "ci_upper": 152265.31315840845,
+        "p_value": 2.1934314231901354e-06,
+        "significant": true,
+        "n_matched": null,
+        "smd_before": null,
+        "smd_after": null,
+        "balance_improved": null
+      },
+      "propensity_score": {
+        "ate": 683838.3838383838,
+        "se": 91006.72738545528,
+        "ci_lower": 505465.1981628915,
+        "ci_upper": 862211.5695138762,
+        "p_value": 2.718060482386224e-11,
+        "significant": true,
+        "n_matched": 99,
+        "smd_before": 0.18716507966227927,
+        "smd_after": 0.09490916108818163,
+        "balance_improved": true
+      }
+    },
+    "city_tier_code->life_gap": {
+      "double_ml": {
+        "ate": 248108.50412897486,
+        "se": null,
+        "ci_lower": 116093.30645833956,
+        "ci_upper": 380123.70179961016,
+        "p_value": 0.00022995284939993546,
+        "significant": true,
+        "n_matched": null,
+        "smd_before": null,
+        "smd_after": null,
+        "balance_improved": null
+      },
+      "propensity_score": {
+        "ate": 450602.4096385542,
+        "se": 97956.99569760301,
+        "ci_lower": 258606.69807125232,
+        "ci_upper": 642598.1212058561,
+        "p_value": 1.5203384783857439e-05,
+        "significant": true,
+        "n_matched": 83,
+        "smd_before": 0.0,
+        "smd_after": 0.0668115224315262,
+        "balance_improved": false
+      }
+    },
+    "income_numeric->medical_gap": {
+      "double_ml": {
+        "ate": -0.015700274017079158,
+        "se": null,
+        "ci_lower": -0.17805007565262054,
+        "ci_upper": 0.14664952761846223,
+        "p_value": 0.8496659600560907,
+        "significant": false,
+        "n_matched": null,
+        "smd_before": null,
+        "smd_after": null,
+        "balance_improved": null
+      },
+      "propensity_score": {
+        "ate": 3899.18,
+        "se": 10190.465419842514,
+        "ci_lower": -16074.132222891327,
+        "ci_upper": 23872.492222891327,
+        "p_value": 0.7028142131320031,
+        "significant": false,
+        "n_matched": 100,
+        "smd_before": 0.0,
+        "smd_after": 0.07006409051478915,
+        "balance_improved": false
+      }
+    },
+    "age->medical_gap": {
+      "double_ml": {
+        "ate": -324.30469828249977,
+        "se": null,
+        "ci_lower": -1287.7361877314615,
+        "ci_upper": 639.1267911664621,
+        "p_value": 0.5094054251350562,
+        "significant": false,
+        "n_matched": null,
+        "smd_before": null,
+        "smd_after": null,
+        "balance_improved": null
+      },
+      "propensity_score": {
+        "ate": -5792.49,
+        "se": 12146.201622658906,
+        "ci_lower": -29599.045180411456,
+        "ci_upper": 18014.065180411453,
+        "p_value": 0.6344863162979475,
+        "significant": false,
+        "n_matched": 100,
+        "smd_before": 0.0,
+        "smd_after": 0.0673612671801861,
+        "balance_improved": false
+      }
+    },
+    "family_burden->medical_gap": {
+      "double_ml": {
+        "ate": -360.67059821308226,
+        "se": null,
+        "ci_lower": -4378.223745038155,
+        "ci_upper": 3656.8825486119904,
+        "p_value": 0.8603281597271331,
+        "significant": false,
+        "n_matched": null,
+        "smd_before": null,
+        "smd_after": null,
+        "balance_improved": null
+      },
+      "propensity_score": {
+        "ate": 604.3434343434343,
+        "se": 10109.437503390282,
+        "ci_lower": -19210.154072301517,
+        "ci_upper": 20418.840940988386,
+        "p_value": 0.9524524921350401,
+        "significant": false,
+        "n_matched": 99,
+        "smd_before": 0.18716507966227927,
+        "smd_after": 0.09490916108818163,
+        "balance_improved": true
+      }
+    },
+    "city_tier_code->medical_gap": {
+      "double_ml": {
+        "ate": 24894.488494822606,
+        "se": null,
+        "ci_lower": 10887.750218367462,
+        "ci_upper": 38901.226771277754,
+        "p_value": 0.0004948074749114235,
+        "significant": true,
+        "n_matched": null,
+        "smd_before": null,
+        "smd_after": null,
+        "balance_improved": null
+      },
+      "propensity_score": {
+        "ate": 44492.77108433735,
+        "se": 12790.869284527604,
+        "ci_lower": 19422.667286663247,
+        "ci_upper": 69562.87488201146,
+        "p_value": 0.0008099013875910719,
+        "significant": true,
+        "n_matched": 83,
+        "smd_before": 0.0,
+        "smd_after": 0.0668115224315262,
+        "balance_improved": false
+      }
+    }
+  },
+  "calibration_multipliers": {
+    "ci_gap_multiplier": {
+      "description": "Income effect on CI gap (DML ATE per yuan of income)",
+      "dml_ate_per_yuan": 4.052667335034372,
+      "dml_ci": [
+        3.165585492553802,
+        4.939749177514943
+      ],
+      "psm_att_high_vs_low_income": 483417.60875,
+      "psm_p_value": 3.4408597471739256e-17,
+      "normalized_10k_yuan": 40526.67335034372,
+      "interpretation": "每增加1元收入，重疾缺口增加4.05元；每增加1万元收入，重疾缺口增加40527元"
+    },
+    "life_gap_multiplier": {
+      "description": "Family burden effect on life gap (DML ATE per unit burden)",
+      "dml_ate_per_burden_unit": 107686.98680881251,
+      "dml_ci": [
+        63108.66045921657,
+        152265.31315840845
+      ],
+      "psm_att_high_vs_low_burden": 683838.3838383838,
+      "psm_p_value": 2.718060482386224e-11,
+      "interpretation": "家庭负担每增加1单位，寿险缺口增加107687元"
+    },
+    "medical_gap_multiplier": {
+      "description": "City tier effect on medical gap (DML ATE per tier level)",
+      "dml_ate_per_tier": 24894.488494822606,
+      "dml_ci": [
+        10887.750218367462,
+        38901.226771277754
+      ],
+      "psm_att_high_vs_low_tier": 44492.77108433735,
+      "psm_p_value": 0.0008099013875910719,
+      "interpretation": "城市等级每升高1级，医疗缺口增加24894元"
+    }
+  },
+  "feature_importance_ranking": [
+    {
+      "rank": 1,
+      "treatment": "city_tier_code",
+      "effect": "life_gap",
+      "dml_ate": 248108.50412897486,
+      "dml_sig": true,
+      "psm_ate": 450602.4096385542,
+      "psm_sig": true
+    },
+    {
+      "rank": 2,
+      "treatment": "family_burden",
+      "effect": "life_gap",
+      "dml_ate": 107686.98680881251,
+      "dml_sig": true,
+      "psm_ate": 683838.3838383838,
+      "psm_sig": true
+    },
+    {
+      "rank": 3,
+      "treatment": "city_tier_code",
+      "effect": "medical_gap",
+      "dml_ate": 24894.488494822606,
+      "dml_sig": true,
+      "psm_ate": 44492.77108433735,
+      "psm_sig": true
+    },
+    {
+      "rank": 4,
+      "treatment": "income_numeric",
+      "effect": "ci_gap",
+      "dml_ate": 4.052667335034372,
+      "dml_sig": true,
+      "psm_ate": 483417.60875,
+      "psm_sig": true
+    },
+    {
+      "rank": 5,
+      "treatment": "family_burden",
+      "effect": "ci_gap",
+      "dml_ate": 16554.695447088605,
+      "dml_sig": false,
+      "psm_ate": 194956.07449494948,
+      "psm_sig": true
+    },
+    {
+      "rank": 6,
+      "treatment": "age",
+      "effect": "life_gap",
+      "dml_ate": -7399.841131257992,
+      "dml_sig": false,
+      "psm_ate": -275000.0,
+      "psm_sig": true
+    },
+    {
+      "rank": 7,
+      "treatment": "age",
+      "effect": "ci_gap",
+      "dml_ate": -4079.2065368262656,
+      "dml_sig": true,
+      "psm_ate": -97921.64125,
+      "psm_sig": false
+    },
+    {
+      "rank": 8,
+      "treatment": "income_numeric",
+      "effect": "life_gap",
+      "dml_ate": 1.155812773286657,
+      "dml_sig": false,
+      "psm_ate": 156000.0,
+      "psm_sig": true
+    },
+    {
+      "rank": 9,
+      "treatment": "city_tier_code",
+      "effect": "ci_gap",
+      "dml_ate": 47542.55943746539,
+      "dml_sig": false,
+      "psm_ate": 114468.21837349398,
+      "psm_sig": false
+    },
+    {
+      "rank": 10,
+      "treatment": "family_burden",
+      "effect": "medical_gap",
+      "dml_ate": -360.67059821308226,
+      "dml_sig": false,
+      "psm_ate": 604.3434343434343,
+      "psm_sig": false
+    },
+    {
+      "rank": 11,
+      "treatment": "age",
+      "effect": "medical_gap",
+      "dml_ate": -324.30469828249977,
+      "dml_sig": false,
+      "psm_ate": -5792.49,
+      "psm_sig": false
+    },
+    {
+      "rank": 12,
+      "treatment": "income_numeric",
+      "effect": "medical_gap",
+      "dml_ate": -0.015700274017079158,
+      "dml_sig": false,
+      "psm_ate": 3899.18,
+      "psm_sig": false
+    }
+  ]
+}

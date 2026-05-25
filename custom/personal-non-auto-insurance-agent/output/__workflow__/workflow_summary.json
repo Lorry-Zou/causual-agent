@@ -1,0 +1,18 @@
+{
+  "workflow": "personal-non-auto-insurance-agent",
+  "completed_at": "2026-05-25T13:10:51",
+  "steps_executed": [
+    "profile_modeler",
+    "policy_orchestrator",
+    "gap_diagnosis_engine",
+    "_causal_runs",
+    "churn_recovery_agent",
+    "_trigger_gap_reactivation",
+    "_gap_reactivation_done",
+    "gap_diagnosis_reactivation"
+  ],
+  "causal_analyses_run": [
+    "churn_attribution (fresh)",
+    "gap_calibration (cached)"
+  ]
+}

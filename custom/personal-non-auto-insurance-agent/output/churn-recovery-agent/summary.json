@@ -1,0 +1,4 @@
+{
+  "causal_churn_attribution_result.json": "因果推断结果: churn_attribution",
+  "recovery_result.txt": "流失召回完整输出（流失检测/因果归因/策略匹配/召回执行/效果跟踪）"
+}

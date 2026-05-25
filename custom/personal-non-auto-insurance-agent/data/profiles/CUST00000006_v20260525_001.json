@@ -1,0 +1,251 @@
+{
+  "user_id": "CUST00000006",
+  "version": "v20260525_001",
+  "generated_at": "2026-05-25T12:05:17",
+  "basic_tags": {
+    "age": 36,
+    "age_group": "中青",
+    "gender": "female",
+    "marital_status": "已婚",
+    "family_structure": "三代同堂",
+    "children_count": 2,
+    "has_elderly": false,
+    "education": "高中及以下",
+    "occupation_category": 1,
+    "occupation": "金融从业",
+    "annual_income": 61523.64,
+    "income_bracket": "5-10万",
+    "province": "新疆",
+    "city_tier": "一线",
+    "region": "西北",
+    "acquisition_channel": "转介绍",
+    "acquisition_date": "2019-05-30",
+    "customer_value_tier": "高净值",
+    "risk_level": "低风险"
+  },
+  "insurance_tags": {
+    "total_policies": 5,
+    "active_policies": 3,
+    "total_annual_premium": 13863.62,
+    "coverage_matrix": {
+      "医疗险": {
+        "has_coverage": false,
+        "sum_insured": 0.0,
+        "count": 0,
+        "active_count": 0
+      },
+      "重疾险": {
+        "has_coverage": true,
+        "sum_insured": 986773.68,
+        "count": 3,
+        "active_count": 2
+      },
+      "意外险": {
+        "has_coverage": false,
+        "sum_insured": 0.0,
+        "count": 0,
+        "active_count": 0
+      },
+      "寿险": {
+        "has_coverage": false,
+        "sum_insured": 0.0,
+        "count": 0,
+        "active_count": 0
+      },
+      "年金险": {
+        "has_coverage": false,
+        "sum_insured": 0.0,
+        "count": 0,
+        "active_count": 0
+      },
+      "家财险": {
+        "has_coverage": true,
+        "sum_insured": 456870.01,
+        "count": 2,
+        "active_count": 1
+      },
+      "旅行险": {
+        "has_coverage": false,
+        "sum_insured": 0.0,
+        "count": 0,
+        "active_count": 0
+      },
+      "少儿险": {
+        "has_coverage": false,
+        "sum_insured": 0.0,
+        "count": 0,
+        "active_count": 0
+      },
+      "老人专项险": {
+        "has_coverage": false,
+        "sum_insured": 0.0,
+        "count": 0,
+        "active_count": 0
+      }
+    },
+    "policy_details": [
+      {
+        "policy_no": "POL0000000014",
+        "product_code": "ZC-JC-06",
+        "insurance_type": "家财险",
+        "status": "理赔中",
+        "sum_insured": 262062.95,
+        "annual_premium": 2458.54,
+        "effective_date": "2024-01-16",
+        "expiry_date": "2054-01-08",
+        "payment_method": "年交",
+        "sales_channel": "代理人",
+        "has_claims": false,
+        "cumulative_claim_amount": 0.0
+      },
+      {
+        "policy_no": "POL0000000015",
+        "product_code": "ZJ-CA-02",
+        "insurance_type": "重疾险",
+        "status": "续保",
+        "sum_insured": 384784.37,
+        "annual_premium": 1946.46,
+        "effective_date": "2022-10-21",
+        "expiry_date": "2023-10-21",
+        "payment_method": "季交",
+        "sales_channel": "线上直销",
+        "has_claims": false,
+        "cumulative_claim_amount": 0.0
+      },
+      {
+        "policy_no": "POL0000000016",
+        "product_code": "ZJ-CA-02",
+        "insurance_type": "重疾险",
+        "status": "减保",
+        "sum_insured": 296060.61,
+        "annual_premium": 4503.83,
+        "effective_date": "2025-06-07",
+        "expiry_date": "2026-06-07",
+        "payment_method": "年交",
+        "sales_channel": "电话销售",
+        "has_claims": false,
+        "cumulative_claim_amount": 0.0
+      },
+      {
+        "policy_no": "POL0000000017",
+        "product_code": "ZJ-CA-02",
+        "insurance_type": "重疾险",
+        "status": "续保",
+        "sum_insured": 305928.7,
+        "annual_premium": 1513.67,
+        "effective_date": "2023-06-28",
+        "expiry_date": "2024-06-27",
+        "payment_method": "月交",
+        "sales_channel": "线上直销",
+        "has_claims": false,
+        "cumulative_claim_amount": 0.0
+      },
+      {
+        "policy_no": "POL0000000018",
+        "product_code": "ZC-JC-06",
+        "insurance_type": "家财险",
+        "status": "新保",
+        "sum_insured": 194807.06,
+        "annual_premium": 3441.12,
+        "effective_date": "2025-11-25",
+        "expiry_date": "2055-11-18",
+        "payment_method": "季交",
+        "sales_channel": "经代渠道",
+        "has_claims": false,
+        "cumulative_claim_amount": 0.0
+      }
+    ],
+    "payment_summary": {
+      "total_payment_records": 60,
+      "status_distribution": {
+        "已缴": 51,
+        "宽限期内": 4,
+        "未缴": 3,
+        "已逾期": 2
+      }
+    },
+    "social_insurance_type": "城乡居民医保",
+    "social_insurance_reimburse_ratio": 0.5795,
+    "social_insurance_cap": 100000.0,
+    "employer_supplementary": 0.0,
+    "health_risk_score": 17.37,
+    "occupation_risk_level": 1
+  },
+  "health_tags": {
+    "health_risk_score": 17.37,
+    "disease_history": [
+      "甲状腺结节"
+    ],
+    "abnormal_items_count": 1,
+    "has_chronic_disease": true,
+    "disease_severity": "low",
+    "data_completeness": 0.7
+  },
+  "behavior_tags": {
+    "last_interaction": "2024-03-13 15:37:29",
+    "days_since_last_interaction": 802,
+    "interaction_count_30d": 0,
+    "interaction_count_90d": 0,
+    "top_event_types": {
+      "缴费提醒": 15,
+      "缴费成功": 14,
+      "投保": 3,
+      "生效": 3,
+      "保单体检": 2
+    },
+    "intent_level": "low",
+    "dormancy_score": 7.8,
+    "activity_tier": "lost",
+    "total_events": 41,
+    "has_claim_history": false,
+    "renewal_propensity": 0.6332,
+    "upsell_propensity": 0.9398,
+    "complaint_count": 0
+  },
+  "need_tags": [
+    {
+      "tag": "医疗刚需",
+      "confidence": 0.95,
+      "reason": "无任何医疗险覆盖",
+      "evidence_fields": [
+        "insurance_tags.coverage_matrix.医疗险.has_coverage"
+      ]
+    },
+    {
+      "tag": "家庭责任",
+      "confidence": 0.92,
+      "reason": "三代同堂家庭无寿险覆盖，家庭经济支柱缺乏保障",
+      "evidence_fields": [
+        "basic_tags.family_structure",
+        "insurance_tags.coverage_matrix.寿险.has_coverage"
+      ]
+    },
+    {
+      "tag": "子女规划",
+      "confidence": 0.85,
+      "reason": "有2个子女但无少儿险/教育金覆盖",
+      "evidence_fields": [
+        "basic_tags.children_count",
+        "insurance_tags.coverage_matrix.少儿险.has_coverage"
+      ]
+    },
+    {
+      "tag": "出行保障",
+      "confidence": 0.6,
+      "reason": "无意外险覆盖",
+      "evidence_fields": [
+        "insurance_tags.coverage_matrix.意外险.has_coverage",
+        "behavior_tags.activity_tier"
+      ]
+    },
+    {
+      "tag": "养老储蓄",
+      "confidence": 0.42,
+      "reason": "年龄36岁无养老储蓄工具",
+      "evidence_fields": [
+        "basic_tags.age",
+        "insurance_tags.coverage_matrix.年金险.has_coverage"
+      ]
+    }
+  ]
+}
