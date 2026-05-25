@@ -1,0 +1,35 @@
+data:
+  categorical_max_ratio: 0.3
+  categorical_max_unique: 20
+  missing_threshold: 0.5
+  outlier_method: iqr
+  outlier_threshold: 1.5
+llm:
+  api_key: ${DEEPSEEK_API_KEY}
+  base_url: https://api.deepseek.com
+  max_tokens: 393216
+  model: deepseek-v4-pro
+  provider: deepseek
+  temperature: 0.1
+models:
+  default:
+  - panel_regression
+  - propensity_score
+  discovery:
+  - pc
+  - fci
+  - lingam
+  selection_confidence_threshold: 0.3
+pipeline:
+  interactive: true
+  max_turns: 3
+  output_dir: ./output
+report:
+  format: docx
+  include_code: false
+  language: zh
+custom_agents:
+  storage_dir: ./custom
+  auto_collect_knowledge: true
+  max_search_results: 10
+  default_model: deepseek-v4-pro
